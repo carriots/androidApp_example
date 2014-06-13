@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Carriots</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcomeTitle">Welcome to</string>
+    <string name="btnStreams">Send Stream</string>
+    <string name="btnConfig">Configuration</string>
+    <string name="title_activity_device">Choose a Device</string>
+    <string name="title_activity_send_stream">Send Stream</string>
+    <string name="wizardTitle">Send Streams</string>
+    <string name="step1">Step 1 of 3 Select Device</string>
+    <string name="deviceMsg">Select the Device you want to send streams with:</string>
+    <string name="deviceLabel">Device</string>
+    <string name="title_activity_json">Add Data</string>
+    <string name="step2">Step 2 of 3 Add data to your stream</string>
+    <string name="title_activity_add_param">AddParam</string>
+    <string name="title_activity_add_post_body">AddPostBody</string>
+    <string name="streamData">Stream Data</string>
+    <string name="keyLabel">Key</string>
+    <string name="valueLabel">Value</string>
+    <string name="btnNext">Next Step</string>
+    <string name="addPairs">Add key-vale pairs or set post body</string>
+    <string name="step3">Step 3 of 3 Summary</string>
+    <string name="bodyLabel">Body</string>
+    <string name="btnAddData">+Data</string>
+    <string name="title_activity_configuration">Configuration</string>
+    <string name="configLabel">Configuration</string>
+    <string name="apikeyLabel">Apikey:</string>
+    <string name="apikeyNumber"></string>
+    <string name="changeApikey">Change Apikey:</string>
+    <string name="btnSave">Set Apikey</string>
+    <string name="btnReturn">Go to Step 1</string>
+    <string name="btnSendAgain">Resend</string>
+    <string name="alertMsg">You cannot send streams without specifying your Carriots Apikey in Configuration. Go to configuration now</string>
+    <string name="alertYes">Yes</string>
+    <string name="alertNo">No</string>
+    <string name="alertApikey">The apikey entered is not valid. The apikey must contain 64 alphanumeric characters.</string>
+    <string name="alertDevice">Devices not found. You may not be connected to Internet or your apikey may be invalid. Go to configuration now</string>
+    <string name="alertNoDevice">It is impossible to continue without specifying a device</string>
+    <string name="noJson">There are no key-value pairs to send</string>
+    <string name="jsonNotValid">The JSON is empty or invalid</string>
+    <string name="welcomeInstructions">Welcome to the Carriots Stream Sending Wizard. To use this app your should:</string>
+    <string name="instruction1">1) Go to Configuration and enter your Carriots Apikey (you can scan your apikey in the Carriots Control Panel -> Show Apikeys)</string>
+    <string name="instruction2">2) Go to Send Streams. Choose a device, enter some data and send your stream to Carriots.</string>
+    <string name="descLogo">Carriots Logo</string>
+    <string name="blankJson">{\n\"key\":\"Your JSON here\"\n}</string>
+    <string name="tabAddParam">Add Param</string>
+    <string name="tabPostBody">Add Post Body</string>
+    <string name="atLabel">at</string>
+    <string name="dataLabel">data</string>
+    <string name="previousStreamLabel">These are the 10 previous streams from:</string>
+    <string name="btnScan">Scan QR Apikey</string>
+    <string name="title_activity_scanner">Scanner</string>
+    <string name="titleBarcodeAlert">Install Barcode Scanner?</string>
+    <string name="msgBarcodeAlert">\"Yes\" to install, \"No\" to use default scanner.</string>
+    <string name="checkGPS">Send with GPS location</string>
+    <string name="btnMap">Stream Map</string>
+    <string name="gpsSearch">Finding Location</string>
+    <string name="title_activity_stream_map">Stream Map</string>
+    <string name="notFound">Could not find location, try again.</string>
+    <string name="noStreamsLocation">No streams found with location on this device.</string>
+
+</resources>

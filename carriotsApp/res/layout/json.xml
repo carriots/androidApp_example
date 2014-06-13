@@ -1,0 +1,224 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+ 	android:layout_height="fill_parent"
+ 	android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+	<TabHost
+		android:id="@+id/tabHost"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent">
+		
+	    <RelativeLayout 
+		    android:id="@+id/relative"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent" >
+	
+		    <TextView
+		        android:id="@+id/deviceTitle"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:text="@string/wizardTitle"
+		        style="@style/title"/>
+		    
+		     <TextView
+		        android:id="@+id/step2Title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/deviceTitle"
+		        android:layout_below="@+id/deviceTitle"
+		        android:layout_marginTop="19dp"
+		        android:text="@string/step2"
+		        style="@style/subTitle"/>
+		
+		    <TextView
+		        android:id="@+id/deviceLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/step2Title"
+		        android:layout_below="@+id/step2Title"
+		        android:layout_marginTop="14dp"
+		        android:layout_marginLeft="8dp"
+		        android:text="@string/deviceLabel"/>
+		    
+			<Spinner
+			    android:id="@+id/deviceSpinner"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/step2Title"
+			    android:layout_toRightOf="@+id/deviceLabel"
+			    android:layout_marginLeft="10dp"
+			    android:spinnerMode="dropdown" />
+		    
+		     <TextView
+				android:id="@+id/addKeysTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/deviceTitle"
+		        android:layout_below="@+id/deviceLabel"
+		        android:layout_marginTop="30dp"
+				android:text="@string/addPairs"
+				style="@style/subTitle"/>
+		
+			
+			<LinearLayout
+			    android:id="@+id/linear"
+			    android:layout_below="@+id/addKeysTitle"
+			    android:layout_marginTop="10dp"
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_marginLeft="8dp"
+				android:layout_height="wrap_content">
+		
+				<TabWidget
+					android:id="@android:id/tabs"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+		
+					<FrameLayout
+						android:id="@android:id/tabcontent"
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:background="#f8f5ef">
+		
+						<FrameLayout
+							android:id="@+id/tab1"
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent" >
+							
+						    <RelativeLayout 
+						        android:id="@+id/relative2"
+								android:orientation="vertical"
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent">
+						   
+		   				 		<TextView
+							        android:id="@+id/streamDataLabel"
+							        android:layout_width="wrap_content"
+							        android:layout_height="wrap_content"
+							        android:layout_marginTop="14dp"
+							        android:text="@string/streamData"
+							        style="@style/subTitle"/>
+		   				 
+		   				 		<TableLayout
+							        android:id="@+id/table"
+							        android:layout_width="wrap_content"
+							        android:layout_height="wrap_content"
+							        android:layout_marginLeft="14dp"
+							        android:layout_below="@+id/streamDataLabel" >
+		
+			        				<TableRow
+							            android:id="@+id/tr1"
+							            android:layout_width="wrap_content"
+							            android:layout_height="wrap_content" >
+			            
+				            			<TextView
+									        android:id="@+id/keyLabel"
+									        android:layout_width="wrap_content"
+									        android:layout_height="wrap_content"
+									        android:text="@string/keyLabel"
+									        android:textAppearance="?android:attr/textAppearanceSmall" />
+				            
+				            			<EditText
+									        android:id="@+id/editTextKey"
+									        android:layout_width="wrap_content"
+									        android:layout_height="wrap_content"
+									        android:ems="10"
+									        android:inputType="textMultiLine" />
+			            
+			        				</TableRow>
+		
+							        <TableRow
+							            android:id="@+id/tableRow1"
+							            android:layout_width="wrap_content"
+							            android:layout_height="wrap_content" >
+							            
+							            <TextView
+											android:id="@+id/valueLabel"
+										    android:layout_width="wrap_content"
+										    android:layout_height="wrap_content"
+										    android:text="@string/valueLabel"
+										    android:textAppearance="?android:attr/textAppearanceSmall" />
+							    
+							    		<EditText
+									        android:id="@+id/editTextValue"
+									        android:layout_width="wrap_content"
+									        android:layout_height="wrap_content"
+									        android:ems="10"
+									        android:inputType="textMultiLine" />
+							        </TableRow>
+		
+		    					</TableLayout>
+		
+		    					<Button
+							        android:id="@+id/btnAddData"
+							        style="?android:attr/buttonStyleSmall"
+							        android:layout_width="wrap_content"
+							        android:layout_height="35dp"
+							        android:layout_marginTop="14dp"
+							        android:layout_alignLeft="@+id/table"
+			       					android:layout_below="@+id/table"
+							        android:onClick="addData"
+							        android:text="@string/btnAddData" />
+		    			
+		    				</RelativeLayout>
+		    			
+		    			</FrameLayout>
+		
+						<FrameLayout
+							android:id="@+id/tab2"
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent" >
+						
+							<RelativeLayout 
+						        android:id="@+id/relative3"
+								android:orientation="vertical"
+								android:layout_width="fill_parent"
+								android:layout_height="fill_parent">
+		    
+				   				 <TextView
+								 	android:id="@+id/streamDataLabel2"
+								    android:layout_width="wrap_content"
+								    android:layout_height="wrap_content"
+								    android:layout_marginTop="14dp"
+								    android:text="@string/streamData"
+								    style="@style/subTitle"/>
+		
+				   				 <EditText
+				   				    android:id="@+id/multiLineJson"
+				   				    android:layout_width="fill_parent"
+				   				    android:layout_height="wrap_content"
+				   				    android:ems="10"
+				   				    android:layout_below="@+id/streamDataLabel2"
+				   				    android:layout_marginLeft="14dp"
+				   				    android:inputType="textMultiLine"
+				   				    android:text="@string/blankJson" />
+		   				 	
+		   				 	</RelativeLayout>
+		   				 	
+						</FrameLayout>
+						
+					</FrameLayout>
+					
+			</LinearLayout>
+			
+			<Button
+		    	android:id="@+id/btnNext"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_below="@+id/linear"
+		        android:layout_marginTop="14dp"
+		        android:onClick="goToStep3"
+		        android:text="@string/btnNext" />
+		  
+		</RelativeLayout>	    
+		
+	</TabHost>
+  
+</ScrollView>

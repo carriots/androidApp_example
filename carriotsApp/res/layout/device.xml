@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/deviceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/wizardTitle"
+        style="@style/title" />
+
+    <TextView
+        android:id="@+id/step1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/deviceTitle"
+        android:layout_below="@+id/deviceTitle"
+        android:layout_marginTop="19dp"
+        android:text="@string/step1"
+        style="@style/subTitle" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/step1Title"
+        android:layout_below="@+id/step1Title"
+        android:layout_marginTop="14dp"
+        android:text="@string/deviceMsg"/>
+
+    <TextView
+        android:id="@+id/deviceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/step1Title"
+        android:layout_below="@+id/message"
+        android:layout_marginTop="14dp"
+        android:text="@string/deviceLabel"/>
+
+    <Spinner
+	    android:id="@+id/deviceSpinner"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/message"
+	    android:layout_toRightOf="@+id/deviceLabel"
+	    android:layout_marginLeft="10dp"
+	    android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/deviceSpinner"
+        android:layout_below="@+id/deviceSpinner"
+        android:layout_marginTop="25dp"
+        android:layout_centerVertical="true"
+        android:onClick="goToStep2"
+        android:text="@string/btnNext" />
+
+</RelativeLayout>

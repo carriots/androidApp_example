@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.carriotsconnection"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/carriots_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.carriotsconnection.Main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.Device"
+            android:label="@string/title_activity_device" >
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.SendStream"
+            android:label="@string/title_activity_send_stream"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.Json"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_json" >
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.AddParam"
+            android:label="@string/title_activity_add_param" >
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.AddPostBody"
+            android:label="@string/title_activity_add_post_body" >
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.Configuration"
+            android:label="@string/title_activity_configuration" >
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.Scanner"
+            android:label="@string/title_activity_scanner" >
+        </activity>
+        <activity
+            android:name="com.example.carriotsconnection.StreamMap"
+            android:label="@string/title_activity_stream_map"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+        
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="-----------REPLACE WITH YOUR APIKEY--------------" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        
+    </application>
+
+</manifest>
